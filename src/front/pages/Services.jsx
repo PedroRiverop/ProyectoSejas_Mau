@@ -1,29 +1,46 @@
 import React from "react";
+import { FaComments, FaBuilding, FaTools } from "react-icons/fa";
+import "./Services.css";
 
 const Services = () => {
   return (
     <section id="services" className="section-space bg-light text-center py-5">
       <div className="container">
-        <h2 className="mb-4">Servicios</h2>
+      <h2 className="mb-4">Nuestros Servicios</h2>
         <p className="lead mb-5">
           Te acompañamos en cada etapa del proceso de inversión inmobiliaria.
         </p>
-        <div className="row">
-        <div className="col-md-4 text-center">
-            <img src="https://picsum.photos/100?random=3" alt="Servicio" className="rounded-circle mb-3 shadow" />
-            <h5>Asesoramiento</h5>
-            <p>Consultoría personalizada para identificar las mejores oportunidades.</p>
-        </div>
-        <div className="col-md-4 text-center">
-            <img src="https://picsum.photos/100?random=4" alt="Servicio" className="rounded-circle mb-3 shadow" />
-            <h5>Proyectos Exclusivos</h5>
-            <p>cceso a desarrollos de alta rentabilidad y bajo riesgo..</p>
-        </div>
-        <div className="col-md-4 text-center">
-            <img src="https://picsum.photos/100?random=1" alt="Servicio" className="rounded-circle mb-3 shadow" />
-            <h5>Gestión Integral</h5>
-            <p>Administración, seguimiento y soporte legal para tu inversión.</p>
-        </div>
+
+        <div className="row justify-content-center">
+          <div className="col-md-4 mb-4">
+            <div className="service-card">
+              <div className="service-icon">
+                <FaComments />
+              </div>
+              <h5 className="mt-3">Asesoramiento Personalizado</h5>
+              <p>Te guiamos en cada paso para tomar decisiones estratégicas de inversión.</p>
+            </div>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <div className="service-card">
+              <div className="service-icon">
+                <FaBuilding />
+              </div>
+              <h5 className="mt-3">Acceso a Proyectos Exclusivos</h5>
+              <p>Conectamos inversores con desarrollos únicos y de alto rendimiento.</p>
+            </div>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <div className="service-card">
+              <div className="service-icon">
+                <FaTools />
+              </div>
+              <h5 className="mt-3">Gestión Integral</h5>
+              <p>Administración, seguimiento legal y soporte post-inversión.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

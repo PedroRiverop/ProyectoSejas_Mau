@@ -8,7 +8,8 @@ const Hero = () => {
             <div className="hero-content text-white">
                 <h1 className="display-4 fw-bold">Invierte en el Futuro</h1>
                 <p className="lead">Proyectos inmobiliarios de alto impacto, seguridad y rentabilidad</p>
-                <a href="#contact" className="btn btn-primary mt-4">Contáctanos</a>
+                <a href="#contact" className="btn btn-orange mt-4">Contáctanos</a>
+
             </div>
         </section>
     );
