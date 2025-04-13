@@ -6,7 +6,7 @@ import { NavbarProyectos } from "../components/NavbarProyectos"
 export const ProjectLayout = () => {
   return (
     <>
-      <NavbarProyectos />>
+      <NavbarProyectos />
       <Outlet />
       <Footer />
     </>
