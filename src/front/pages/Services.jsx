@@ -8,7 +8,7 @@ const Services = () => {
       <div className="container">
       <h2 className="mb-4">Nuestros Servicios</h2>
         <p className="lead mb-5">
-          Te acompañamos en cada etapa del proceso de inversión inmobiliaria.
+          Te acompañamos en cada etapa del proceso de inversión, brindando seguridad, transparencia y confianza.
         </p>
 
         <div className="row justify-content-center">
@@ -42,6 +42,10 @@ const Services = () => {
             </div>
           </div>
         </div>
+        <p className="lead mb-5">
+        En Brazil Investment Hub, transformamos oportunidades en inversiones sólidas, abriendo las puertas del mercado 
+        brasileño a inversores que buscan crecimiento, diversificación y alta valorización.
+        </p>
       </div>
     </section>
   );
