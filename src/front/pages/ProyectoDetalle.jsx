@@ -1,13 +1,18 @@
-import React from "react";
-import { FaMapMarkerAlt, FaSwimmer, FaDumbbell, FaHotTub, FaUtensils, FaWifi, FaBuilding, FaBriefcase } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { FaMapMarkerAlt, FaSwimmer, FaDumbbell, FaHotTub, FaUtensils, FaWifi, FaBuilding, FaBriefcase, FaFutbol, FaGamepad, FaCocktail, FaSun   } from "react-icons/fa";
+import { GiTennisCourt, GiWaveSurfer } from "react-icons/gi";
 import { Carousel } from "react-bootstrap";
 import Contact from "./Contact.jsx";
 import "./ProyectoDetalle.css";
 import Slider from "react-slick";
+import ModalImage from "react-modal-image";
+import BotonWhatsappFlotante from "../components/BotonWhatsappFlotante";
+
 
 
 const amenityIcons = {
-    piscina: <FaSwimmer />, // piscina común
+    piscina: <FaSwimmer />,
+    "piscina de surf": <GiWaveSurfer />,
     gimnasio: <FaDumbbell />,
     spa: <FaHotTub />,
     churrasqueira: <FaUtensils />,
@@ -15,7 +20,15 @@ const amenityIcons = {
     wifi: <FaWifi />,
     lavanderia: <FaBuilding />,
     ubicacion: <FaMapMarkerAlt />,
+    "cancha de futbol": <FaFutbol />,
+    "cancha de tenis": <GiTennisCourt />,
+    "sala de juegos": <FaGamepad />,
+    bar: <FaCocktail />,
+    solarium: <FaSun />
 };
+
+
+
 
 const ProyectoDetalle = ({
     nombre,
@@ -31,6 +44,25 @@ const ProyectoDetalle = ({
     fondoMasterplan,
     datosDestacados = [],
 }) => {
+
+    const [mostrarMensaje, setMostrarMensaje] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollTop = window.scrollY;
+            const triggerPoint = window.innerHeight / 2;
+
+            if (scrollTop > triggerPoint) {
+                setMostrarMensaje(true);
+                setTimeout(() => setMostrarMensaje(false), 5000);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+
     return (
         <div className="proyecto-detalle">
             {/* Carrusel principal */}
@@ -63,7 +95,7 @@ const ProyectoDetalle = ({
                 className="seccion-masterplan text-white py-5"
                 style={{
                     backgroundImage: fondoMasterplan ? `url(${fondoMasterplan})` : "none",
-                    backgroundColor: fondoMasterplan ? "transparent" : "#00bcd4",
+                    backgroundColor: fondoMasterplan ? "transparent" : "#bafefe",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     position: "relative",
@@ -78,13 +110,15 @@ const ProyectoDetalle = ({
                             </div>
                         ))}
                     </div>
-                    <p className="lead text-shadow-light">{descripcionMasterplan}</p>
+
                 </div>
+            </section>
+            <section className="descripcion container py-4">
+                <p className="lead text-justify text-masterplan">{descripcionMasterplan}</p>
             </section>
 
             {/* Galería complementaria */}
             <section className="galeria container py-5">
-                <h4 className="mb-4">Ambientes destacados</h4>
                 <Slider
                     dots={true}
                     infinite={true}
@@ -92,24 +126,24 @@ const ProyectoDetalle = ({
                     slidesToShow={3}
                     slidesToScroll={1}
                     responsive={[
-                    {
-                        breakpoint: 992,
-                        settings: { slidesToShow: 2 },
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: { slidesToShow: 1 },
-                    },
+                        {
+                            breakpoint: 992,
+                            settings: { slidesToShow: 2 },
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: { slidesToShow: 1 },
+                        },
                     ]}
                 >
                     {galeriaComplementaria.map((img, i) => (
-                    <div key={i} className="px-2">
-                        <img
-                        src={img}
-                        alt={`galeria-${i}`}
-                        className="img-fluid rounded-3 shadow-sm ambiente-slider"
-                        />
-                    </div>
+                        <div key={i} className="px-2">
+                            <img
+                                src={img}
+                                alt={`galeria-${i}`}
+                                className="img-fluid rounded-3 shadow-sm ambiente-slider"
+                            />
+                        </div>
                     ))}
                 </Slider>
             </section>
@@ -117,7 +151,7 @@ const ProyectoDetalle = ({
 
             {/* Amenities */}
             <section className="amenities container py-5">
-                <h4 className="mb-4">Amenities del proyecto</h4>
+
                 <div className="d-flex flex-wrap gap-4 justify-content-center">
                     {amenities.map((am, i) => (
                         <div className="text-center text-orange" key={i}>
@@ -130,30 +164,54 @@ const ProyectoDetalle = ({
 
             {/* Ubicación */}
             <section className="ubicacion container py-5 text-center">
-                <h4 className="mb-3">Ubicación</h4>
+                <h4 className="text-orange mb-3">Ubicación estratégica</h4>
+                <p className="text-muted mb-4">Donde todo está a tu alcance: gastronomía, comercio y transporte</p>
                 <a href={ubicacion.link} target="_blank" rel="noopener noreferrer">
                     <img src={ubicacion.imagen} alt="ubicacion" className="img-fluid rounded-3 shadow" />
                 </a>
             </section>
 
             {/* Tipologías */}
-            {tipologias.length > 0 && (
-                <section className="tipologias container py-5">
-                    <h4 className="mb-4">Tipologías disponibles</h4>
+            <section className="tipologias container py-5">
+
+                <div className="row">
                     {tipologias.map((tipo, i) => (
-                        <div className="mb-4" key={i}>
-                            <h5 className="fw-bold text-orange">{tipo.nombre}</h5>
-                            <p className="text-justify">{tipo.descripcion}</p>
+                        <div className="col-md-6 mb-4" key={i}>
+                            <div className="d-flex flex-column flex-md-row align-items-center text-centergap-4">
+                                <div className="tipologiaText">
+                                    <h5 className="fw-bold text-orange">{tipo.nombre}</h5>
+                                    <p className="text-tipologia">{tipo.descripcion}</p>
+                                </div>
+                                {tipo.planoImg && (
+                                    <div className="tipologiaMap">
+                                        <ModalImage
+                                            small={tipo.planoImg}
+                                            large={tipo.planoImg}
+                                            alt={`Plano ${tipo.nombre}`}
+                                            hideDownload
+                                            hideZoom
+                                            className="rounded shadow-sm"
+                                        />
+                                    </div>
+                                )}
+                            </div>
                         </div>
                     ))}
-                </section>
-            )}
+                </div>
+            </section>
+
 
             {/* Cierre + Formulario */}
             <section className="formulario container py-5">
-                <p className="lead text-center mb-4">{textoFinal}</p>
+                <p className="lead text-center mb-4 text-contacto-final">
+                    {textoFinal}
+                </p>
                 <Contact />
             </section>
+
+            <BotonWhatsappFlotante />
+
+
         </div>
     );
 };

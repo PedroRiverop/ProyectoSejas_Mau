@@ -19,7 +19,7 @@ const Projects = () => {
               <a href="/proyecto-be-in-rio" className="btn btn-outline-light btn-sm mt-2">Ver Detalles</a>
             </div>
           </div>
-          <p className="project-description mt-3 text-center fw-medium text-dark">Departamentos premium en ubicación estratégica.</p>
+          <p className="project-description mt-3 text-center fw-medium text-dark">Oportunidades de ubicación estratégica en Ipanema y Copacabana</p>
         </div>
 
         <div className="col-md-4 mb-4">
@@ -30,7 +30,7 @@ const Projects = () => {
               <a href="/proyecto-cidade-arte" className="btn btn-outline-light btn-sm mt-2">Ver Detalles</a>
             </div>
           </div>
-          <p className="project-description mt-3 text-center fw-medium text-dark">Donde el diseño y la naturaleza se unen</p>
+          <p className="project-description mt-3 text-center fw-medium text-dark">Opciones en Barra da Tijuca, donde el diseño y la naturaleza se unen</p>
         </div>
 
         <div className="col-md-4 mb-4">
@@ -41,7 +41,7 @@ const Projects = () => {
               <a href="/proyecto-ora" className="btn btn-outline-light btn-sm mt-2">Ver Detalles</a>
             </div>
           </div>
-          <p className="project-description mt-3 text-center fw-medium text-dark">Inversión inteligente en el centro de Rio.</p>
+          <p className="project-description mt-3 text-center fw-medium text-dark">Inversión inteligente en el centro de Rio, frente al aeropuerto</p>
         </div>
 
       </div>

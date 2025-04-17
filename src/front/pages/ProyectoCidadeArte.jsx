@@ -5,17 +5,53 @@ export const ProyectoCidadeArte = () => {
     return (
         <ProyectoDetalle
             nombre="Cidade Arte"
-            descripcionDestacada="Cidade Arte es un barrio innovador, diseñado para ofrecer eficiencia, sostenibilidad y alta calidad de vida con el menor impacto ambiental..."
-            fachada="/assets/cidadearte/fachada.jpg"
-            imagenesCarrusel={["../src/front/assets/cidadearte/hero1.jpg", "/assets/cidadearte/hero2.jpg", "/assets/cidadearte/hero3.jpg"]}
-            descripcionMasterplan="Con calles arboladas y vegetación nativa de la Mata Atlántica integrada al entorno urbano, el proyecto ofrece un trazado inusual y armonioso..."
-            galeriaComplementaria={["/assets/cidadearte/area1.jpg", "/assets/cidadearte/area2.jpg", "/assets/cidadearte/area3.jpg"]}
-            amenities={["piscina", "cowork", "spa", "churrasqueira", "gimnasio", "playground"]}
+            descripcionDestacada="Cidade Arte es un barrio innovador, diseñado para ofrecer eficiencia, sostenibilidad y alta calidad de vida..."
+            fachada="src/front/assets/img/project2/fachada.jpg"
+            imagenesCarrusel={["src/front/assets/img/project2/ca1.jpg", "src/front/assets/img/project2/ca2.jpg", 
+                "src/front/assets/img/project2/ca3.jpg", "src/front/assets/img/project2/ca4.jpg"]}
+            descripcionMasterplan="Cidade Arte cuenta con infraestructura completa de alto nivel y un concepto de planificación estratégica, amenidades para adultos e niños y facilidades para el dia a dia..."
+            galeriaComplementaria={["src/front/assets/img/project2/area1.jpg", "src/front/assets/img/project2/area2.jpg", 
+                "src/front/assets/img/project2/area3.png", "src/front/assets/img/project2/area4.jpg", "src/front/assets/img/project2/area5.jpg"
+                ,"src/front/assets/img/project2/area6.jpg", "src/front/assets/img/project2/area7.jpg"]}
+            amenities={["piscina", "cowork", "spa", "churrasqueira", "gimnasio", "playground", "piscina de surf"]}
             ubicacion={{
-                imagen: "/assets/cidadearte/mapa.jpg",
-                link: "https://goo.gl/maps/Xxx123CidadeArte"
+                imagen: "src/front/assets/img/project2/ubicacion.png",
+                link: "https://maps.app.goo.gl/fuB4JyxDcPPusE2g8?g_st=com.google.maps.preview.copy"
             }}
-            tipologias={[]}
+            tipologias={[
+                {
+                    nombre: "",
+                    descripcion: "",
+                    planoImg: "src/front/assets/img/project2/tipologia1.png",
+                },
+                {
+                    nombre: "",
+                    descripcion: "",
+                    planoImg: "src/front/assets/img/project2/tipologia2.png",
+                },
+                {
+                    nombre: "",
+                    descripcion: "",
+                    planoImg: "src/front/assets/img/project2/tipologia3.png",
+                },
+                {
+                    nombre: "",
+                    descripcion: "",
+                    planoImg: "src/front/assets/img/project2/tipologia4.png",
+                },
+                {
+                    nombre: "",
+                    descripcion: "",
+                    planoImg: "src/front/assets/img/project2/tipologia5.png",
+                },
+                {
+                    nombre: "",
+                    descripcion: "",
+                    planoImg: "src/front/assets/img/project2/tipologia6.png",
+                }
+            ]}
+            fondoMasterplan="src/front/assets/img/project2/masterplan.jpg"
+            datosDestacados = {["14 pisos", "32 unidades", "20 + amenities"]}
             textoFinal="En Brazil Investment Hub, conectamos inversores con oportunidades exclusivas en el mercado inmobiliario de Río de Janeiro..."
         />
     );

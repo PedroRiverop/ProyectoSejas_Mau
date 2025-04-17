@@ -12,16 +12,17 @@ export const ProyectoBeInRio = () => {
                              "src/front/assets/img/project1/beInRio3.png", "src/front/assets/img/project1/beInRio4.png"]}
             descripcionMasterplan="Be.in.Rio Playa de Ipanema combina confort, diseño contemporáneo y funcionalidad en un espacio donde cada detalle ha sido pensado para armonizar elegancia y autenticidad..."
             galeriaComplementaria={["src/front/assets/img/project1/area1.png", "src/front/assets/img/project1/area2.png",
-                 "src/front/assets/img/project1/area3.png", "src/front/assets/img/project1/area4.png", "src/front/assets/img/project1/area5.png"]}
+                 "src/front/assets/img/project1/area3.png", "src/front/assets/img/project1/area4.png", "src/front/assets/img/project1/area5.png", "src/front/assets/img/project1/area6.png"]}
             amenities={["gimnasio", "piscina", "lavanderia"]}
             ubicacion={{
                 imagen: "src/front/assets/img/project1/ubicacion.png",
-                link: "https://goo.gl/maps/Xxx123BeInRio"
+                link: "https://maps.app.goo.gl/xidbvmthe3c8Jprw6?g_st=com.google.maps.preview.copy"
             }}
             tipologias={[
                 {
                     nombre: "Studio",
                     descripcion: "Un encantador studio en Ipanema, diseñado para ofrecer confort y funcionalidad...",
+                    planoImg: "",
                 },
                 {
                     nombre: "Double Suite",

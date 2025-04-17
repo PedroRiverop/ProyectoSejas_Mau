@@ -14,15 +14,33 @@
   .icon-circle {
     background-color: rgba(255, 122, 0, 0.1);
     color: #ff7a00;
-    font-size: 2rem;
-    width: 70px;
-    height: 70px;
+    font-size: 2.2rem;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    transition: transform 0.3s ease, background-color 0.3s ease;
   }
+
+  .icon-circle:hover {
+    background-color: #ff7a00;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .amenities .fw-semibold {
+    transition: color 0.3s ease;
+  }
+  
+  .amenities .fw-semibold:hover {
+    color: #ff7a00;
+  }
+
+  
+
+
   
   .proyecto-detalle h2, h3, h4, h5 {
     font-weight: 700;
@@ -133,3 +151,42 @@
     justify-content: center;
   }
   
+
+  .react-modal-image {
+    max-width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .react-modal-image:hover {
+    transform: scale(1.03);
+  }
+
+  
+  .text-masterplan {
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.6;
+  }
+
+  .text-contacto-final {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #444;
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+
+  .tipologiaMap {
+    width: 45%;
+    max-width: 225px;
+    margin: auto;
+  }
+
+  .tipologiaText {
+    margin-left: 10%;
+    margin-right: 10%;
+  }

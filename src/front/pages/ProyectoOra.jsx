@@ -5,18 +5,37 @@ export const ProyectoOra = () => {
   return (
     <ProyectoDetalle
       nombre="ORA"
-      descripcionDestacada="ORA: Inversión inteligente en el centro de Rio. Ubicado frente al aeropuerto, en una de las zonas más conectadas y turísticas de la ciudad..."
-      fachada="/assets/ora/fachada.jpg"
-      imagenesCarrusel={["/assets/ora/hero1.jpg", "/assets/ora/hero2.jpg", "/assets/ora/hero3.jpg"]}
-      descripcionMasterplan="ORA ofrece studios, unidades de 1 dormitorio y double suites diseñadas para maximizar rentabilidad. El edificio cuenta con rooftop, coworking, gimnasio..."
-      galeriaComplementaria={["/assets/ora/area1.jpg", "/assets/ora/area2.jpg", "/assets/ora/area3.jpg"]}
-      amenities={["piscina", "cowork", "gimnasio", "wifi"]}
+      descripcionDestacada="magina vivir o invertir en un lugar con vistas a nueve postales icónicas: la Bahía de Guanabara, el Pan de 
+      Azúcar, el Cristo Redentor, los Arcos de Lapa y mucho más. Todo desde tu balcón, la piscina del rooftop o tomando algo con amigos 
+      en el bar. Perfecto para invertir, porque en ORA, la vista es un privilegio y la ubicación, inmejorable..."
+      fachada="src/front/assets/img/project3/fachada.jpg"
+      imagenesCarrusel={["src/front/assets/img/project3/ora1.png", "src/front/assets/img/project3/ora2.png", "src/front/assets/img/project3/ora3.png"]}
+      descripcionMasterplan="ORA cuenta con infraestructura completa para recibir a sus visitantes, disfruta de la maravillosa vista 
+      desde el rooftop en la piscina y aprovecha todo lo que ORA tiene para ofrecerte..."
+      galeriaComplementaria={["src/front/assets/img/project3/area1.png", "src/front/assets/img/project3/area2.png", 
+        "src/front/assets/img/project3/area3.png", "src/front/assets/img/project3/area4.png", "src/front/assets/img/project3/area5.png"]}
+      amenities={["piscina", "cowork", "gimnasio", "sala de juegos", "bar", "solarium","lavanderia"]}
       ubicacion={{
-        imagen: "/assets/ora/mapa.jpg",
-        link: "https://goo.gl/maps/Xxx123Ora"
+        imagen: "src/front/assets/img/project3/ubicacion.jpg",
+        link: "https://maps.app.goo.gl/eXJrStDD8LV2mcaJ8?g_st=com.google.maps.preview.copy"
       }}
-      tipologias={[]}
-      textoFinal="En Brazil Investment Hub, conectamos inversores con oportunidades exclusivas en el mercado inmobiliario de Río de Janeiro..."
+      tipologias={[
+        {
+            nombre: "",
+            descripcion: "",
+            planoImg: "",
+        },
+        {
+            nombre: "",
+            descripcion: "",
+        },
+        
+        
+    ]}
+    fondoMasterplan="src/front/assets/img/project2/masterplan.jpg"
+    datosDestacados = {["16 pisos", "13 unidades", "9 amenities"]}
+      textoFinal="En Brazil Investment Hub, conectamos inversores con oportunidades exclusivas en el mercado inmobiliario de Río de 
+      Janeiro..."
     />
   );
 };

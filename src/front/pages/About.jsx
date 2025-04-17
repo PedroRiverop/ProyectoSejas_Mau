@@ -13,7 +13,7 @@ const About = () => {
         <div className="col-md-6 ps-md-5" data-aos="fade-left">
           <h2 className="mb-3">¿Quiénes Somos?</h2>
           <p className="lead text-justify">
-            <strong>Brazil Investment Hub</strong> es una empresa con sede en Río de Janeiro, especializada en la venta de
+            <strong>Brazil Investment Hub</strong> es una empresa con sede en Rio de Janeiro, especializada en la venta de
             inmuebles y consultoría para inversores de habla hispana. Conectamos a nuestros clientes con las mejores
             oportunidades del mercado carioca, ofreciendo asesoramiento estratégico, conocimiento local y
             un acompañamiento integral y confiable.
