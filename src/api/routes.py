@@ -2,8 +2,8 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, Lead
-from api.utils import generate_sitemap, APIException
+from src.api.models import db, Lead
+from src.api.utils import generate_sitemap, APIException
 from flask_cors import CORS, cross_origin
 
 api = Blueprint('api', __name__)
@@ -14,7 +14,6 @@ CORS(api)
 
 @api.route('/api/contacto', methods=['POST'])
 @cross_origin(origins="https://musical-garbanzo-ggxjgpq4qp6crqj-3000.app.github.dev")
-
 def guardar_lead():
     data = request.get_json()
 
