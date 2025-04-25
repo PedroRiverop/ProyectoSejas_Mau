@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import { FaCheckCircle } from "react-icons/fa";
+import axios from "../axiosInstance";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -21,22 +22,21 @@ const Contact = () => {
     e.preventDefault();
     setCargando(true);
 
-    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
-
-    setCargando(false);
-
-    if (res.ok) {
-      setEnviado(true);
-      setForm({ nombre: "", email: "", telefono: "", mensaje: "" });
-      setTimeout(() => setEnviado(false), 4000);
-    } else {
+    try {
+      const res = await axios.post("/api/api/contacto", form);
+      if (res.status === 201) {
+        setEnviado(true);
+        setForm({ nombre: "", email: "", telefono: "", mensaje: "" });
+        setTimeout(() => setEnviado(false), 4000);
+      }
+    } catch (err) {
+      console.error("Error al enviar el formulario:", err);
       alert("Hubo un error al enviar el formulario.");
+    } finally {
+      setCargando(false);
     }
   };
+
 
   return (
     <section id="contact" className="section-space bg-light py-5">
