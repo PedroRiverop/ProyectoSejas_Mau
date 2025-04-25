@@ -8,7 +8,6 @@ import {
 import { Layout } from "./pages/Layout";
 import { ProjectLayout } from "./pages/ProjectLayout";
 import { Home } from "./pages/Home";
-import { Single } from "./pages/Single";
 import { ProyectoBeInRio } from "./pages/ProyectoBeInRio";
 import { ProyectoCidadeArte } from "./pages/ProyectoCidadeArte";
 import { ProyectoOra } from "./pages/ProyectoOra";
@@ -19,7 +18,7 @@ export const router = createBrowserRouter(
       {/* Rutas con layout principal (navbar, footer general) */}
       <Route path="/" element={<Layout />} errorElement={<h1>Not found!</h1>} >
         <Route index element={<Home />} />
-        <Route path="single/:theId" element={<Single />} />
+        
       </Route>
 
       {/* Rutas con layout personalizado para proyectos */}
