@@ -1,7 +1,7 @@
   
 import os
 from flask_admin import Admin
-from api.models import db, Lead
+from src.api.models import db, Lead
 from flask_admin.contrib.sqla import ModelView
 
 def setup_admin(app):
