@@ -1,5 +1,4 @@
 import React, { useEffect } from "react"
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import Hero from "./Hero.jsx"
 import About from "./About.jsx";
 import Services from "./Services.jsx";
