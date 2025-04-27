@@ -3,7 +3,7 @@ import ProyectoDetalle from "./ProyectoDetalle.jsx";
 import ubicacion from "../assets/img/project2/ubicacion.png"
 import masterplan from "../assets/img/project2/masterplan.jpg"
 import fachada from "../assets/img/project2/fachada.jpg"
-import carrusel1 from "../assets/img/project2/ca1.jpg"
+/*import carrusel1 from "../assets/img/project2/ca1.jpg"
 import carrusel2 from "../assets/img/project2/ca2.jpg"
 import carrusel3 from "../assets/img/project2/ca3.jpg"
 import carrusel4 from "../assets/img/project2/ca4.jpg"
@@ -13,7 +13,7 @@ import area3 from "../assets/img/project2/area3.png"
 import area4 from "../assets/img/project2/area4.jpg"
 import area5 from "../assets/img/project2/area5.jpg"
 import area6 from "../assets/img/project2/area6.jpg"
-import area7 from "../assets/img/project2/area7.jpg"
+import area7 from "../assets/img/project2/area7.jpg"*/
 
 
 export const ProyectoCidadeArte = () => {
@@ -22,9 +22,9 @@ export const ProyectoCidadeArte = () => {
             nombre="Cidade Arte"
             descripcionDestacada="Cidade Arte es un barrio innovador, diseñado para ofrecer eficiencia, sostenibilidad y alta calidad de vida..."
             fachada={fachada}
-            imagenesCarrusel={[carrusel1, carrusel2, carrusel3, carrusel4 ]}
+            //imagenesCarrusel={[carrusel1, carrusel2, carrusel3, carrusel4 ]}
             descripcionMasterplan="Cidade Arte cuenta con infraestructura completa de alto nivel y un concepto de planificación estratégica, amenidades para adultos e niños y facilidades para el dia a dia..."
-            galeriaComplementaria={[area1, area2, area3, area4, area5, area6, area7]}
+            //galeriaComplementaria={[area1, area2, area3, area4, area5, area6, area7]}
             amenities={["piscina", "cowork", "spa", "churrasqueira", "gimnasio", "playground", "piscina de surf"]}
             ubicacion={{
                 imagen: ubicacion,
