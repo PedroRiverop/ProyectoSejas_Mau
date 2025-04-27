@@ -11,6 +11,9 @@ from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
 from flask_cors import CORS
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
+
 
 
 # from models import Person
