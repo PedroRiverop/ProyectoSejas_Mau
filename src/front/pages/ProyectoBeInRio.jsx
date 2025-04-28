@@ -1,13 +1,13 @@
 import React from "react";
 import ProyectoDetalle from "./ProyectoDetalle.jsx";
-import fachada from "../assets/img/project1/fachada.png";
+
 
 export const ProyectoBeInRio = () => {
     return (
         <ProyectoDetalle
             nombre="Be in Rio"
             descripcionDestacada="Aquí, lo mejor de la Zona Sur de Rio se encuentra con un estilo de vida auténtico y vibrante. La Colección Be.in.Rio te permite vivir la esencia carioca..."
-            fachada={fachada}
+            fachada="src/front/assets/img/project1/fachada.png"
             imagenesCarrusel={["src/front/assets/img/project1/beInRio1.png", "src/front/assets/img/project1/beInRio2.png", 
                              "src/front/assets/img/project1/beInRio3.png", "src/front/assets/img/project1/beInRio4.png"]}
             descripcionMasterplan="Be.in.Rio Playa de Ipanema combina confort, diseño contemporáneo y funcionalidad en un espacio donde cada detalle ha sido pensado para armonizar elegancia y autenticidad..."
